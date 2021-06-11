@@ -27,4 +27,4 @@ for _ in range(num_special):
 random.shuffle(password)
 password = ''.join(password)
 pyperclip.copy(password)
-# The password has now been copied to your clipboard.
+print('The password has been copied to the clipboard.')
