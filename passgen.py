@@ -12,17 +12,16 @@ num_special = 11
 
 password = []
 
-for _ in range(num_letters):
-    current_char = random.choice(letters)
-    password.append(current_char)
 
-for _ in range(num_numbers):
-    current_char = random.choice(numbers)
-    password.append(current_char)
+def populate_string(string, symbols, num_symbols):
+    for _ in range(num_symbols):
+        current_char = random.choice(symbols)
+        string.append(current_char)
 
-for _ in range(num_special):
-    current_char = random.choice(special)
-    password.append(current_char)
+
+populate_string(password, letters, num_letters)
+populate_string(password, numbers, num_numbers)
+populate_string(password, special, num_special)
 
 random.shuffle(password)
 password = ''.join(password)
